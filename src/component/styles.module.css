@@ -1,0 +1,20 @@
+mcp-instructions {
+  --primary-color: #3498db;
+  font-family: sans-serif;
+}
+
+.header {
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.btn {
+  background: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+.btn.selected {
+  background: var(--primary-color);
+  color: white;
+}
