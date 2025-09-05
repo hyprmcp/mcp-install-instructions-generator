@@ -22,7 +22,7 @@ export { targets, type Target };
 function generateNameFromURL(url: string): string {
   const parsedUrl = URL.parse(url);
   if (parsedUrl === null) {
-    throw new Error('Invalid URL');
+    throw new Error('Invalid URL: ' + url);
   }
 
   const name =

@@ -7,6 +7,10 @@ export class ClaudeCodeInstruction implements Instructions {
     return undefined;
   }
 
+  getLink(): undefined {
+    return undefined;
+  }
+
   getJSON(): unknown {
     return {
       mcpServers: {

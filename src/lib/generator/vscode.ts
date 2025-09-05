@@ -3,12 +3,17 @@ import { badgeMarkdown } from '../util/markdown';
 
 export class VscodeInstructions implements Instructions {
   constructor(private readonly options: GeneratorOptions) {}
+
   getBadge(): string | undefined {
     return badgeMarkdown(
       'Install in VS Code',
       'https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=for-the-badge&logo=visual-studio-code&logoColor=white',
-      `https://insiders.vscode.dev/redirect?url=vscode:mcp/install?${encodeURIComponent(JSON.stringify(this.getJSON()))}`,
+      this.getLink(),
     );
+  }
+
+  getLink(): string {
+    return `https://insiders.vscode.dev/redirect?url=vscode:mcp/install?${encodeURIComponent(JSON.stringify(this.getJSON()))}`;
   }
 
   getJSON(): unknown {

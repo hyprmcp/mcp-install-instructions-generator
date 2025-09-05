@@ -7,6 +7,10 @@ export class ChatGPTInstructions implements Instructions {
     return undefined;
   }
 
+  getLink(): undefined {
+    return undefined;
+  }
+
   getJSON(): unknown {
     return undefined;
   }

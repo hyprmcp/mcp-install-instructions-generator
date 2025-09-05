@@ -2,12 +2,12 @@
   "compilerOptions": {
     "target": "ES2022",
     "useDefineForClassFields": true,
-    "module": "ESNext",
+    "module": "NodeNext",
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "declaration": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "nodenext",
 
     /* Linting */
     "strict": true,
@@ -17,5 +17,5 @@
     "noUncheckedSideEffectImports": true,
     "outDir": "dist"
   },
-  "files": ["src/lib/index.ts"]
+  "files": ["src/lib/index.ts", "src/cli/index.ts"]
 }

@@ -19,6 +19,12 @@ export class McpInstructions extends HTMLElement {
   private root: DocumentFragment | HTMLElement;
   private rendered = false;
 
+  private readonly markdownProcessor = unified()
+    .use(remarkParse)
+    .use(remarkRehype)
+    .use(rehypeSanitize)
+    .use(rehypeStringify);
+
   constructor() {
     super();
     const template = document.createElement('template');
@@ -88,14 +94,27 @@ export class McpInstructions extends HTMLElement {
       name: this.name,
     });
 
-    this.content.innerHTML = String(
-      await unified()
-        .use(remarkParse)
-        .use(remarkRehype)
-        .use(rehypeSanitize)
-        .use(rehypeStringify)
-        .process(instructions.getMarkdown()),
-    );
+    const nodes: Node[] = [];
+
+    const badge = instructions.getBadge();
+    if (badge) {
+      const el = document.createElement('div');
+      el.innerHTML = await this.md(badge);
+      nodes.push(el);
+    }
+
+    const md = instructions.getMarkdown();
+    if (md) {
+      const el = document.createElement('div');
+      el.innerHTML = await this.md(md);
+      nodes.push(el);
+    }
+
+    this.content.replaceChildren(...nodes);
+  }
+
+  private async md(markdown: string): Promise<string> {
+    return String(await this.markdownProcessor.process(markdown));
   }
 }
 

@@ -1,6 +1,5 @@
 mcp-instructions {
-  --primary-color: #3498db;
-  font-family: sans-serif;
+  --primary-color: var(--mcp-instructions-color, #3498db);
 }
 
 .header {
@@ -8,10 +7,11 @@ mcp-instructions {
 }
 
 .btn {
-  background: white;
+  background: none;
   border: none;
   padding: 5px 10px;
   border-radius: 5px 5px 0 0;
+  cursor: pointer;
 }
 
 .btn.selected {

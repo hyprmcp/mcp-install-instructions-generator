@@ -8,8 +8,12 @@ export class CursorInstruction implements Instructions {
     return badgeMarkdown(
       'Add to Cursor',
       'https://cursor.com/deeplink/mcp-install-dark.svg',
-      `cursor://anysphere.cursor-deeplink/mcp/install?name=${this.options.name}&config=${btoa(JSON.stringify({ url: this.options.url }))}`,
+      this.getLink(),
     );
+  }
+
+  getLink(): string {
+    return `cursor://anysphere.cursor-deeplink/mcp/install?name=${this.options.name}&config=${btoa(JSON.stringify({ url: this.options.url }))}`;
   }
 
   getJSON(): unknown {

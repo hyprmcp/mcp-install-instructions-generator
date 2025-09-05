@@ -1,6 +1,6 @@
 export function badgeMarkdown(
-  imageUrl: string,
   altText: string,
+  imageUrl: string,
   url: string,
 ): string {
   return `[![${altText}](${imageUrl})](${url})`;

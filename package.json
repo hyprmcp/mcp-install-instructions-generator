@@ -3,12 +3,17 @@
   "version": "0.1.0",
   "description": "",
   "scripts": {
-    "build": "rimraf dist && tsc && esbuild --bundle --minify --outdir=dist/component src/component/index.ts",
-    "format": "prettier --write ."
+    "prebuild": "rimraf dist",
+    "build": "tsc && esbuild --bundle --minify --outdir=dist/component src/component/index.ts",
+    "postbuild": "shx chmod +x dist/cli/*.js",
+    "lint": "prettier --check .",
+    "format": "prettier --write .",
+    "cli": "ts-node src/cli/index.ts"
   },
   "files": [
     "dist/*"
   ],
+  "bin": "dist/cli/index.js",
   "repository": {
     "url": "https://github.com/hyprmcp/mcp-instructions",
     "type": "git"
@@ -18,12 +23,17 @@
   "license": "MIT",
   "packageManager": "pnpm@10.15.0",
   "devDependencies": {
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^24.3.1",
     "esbuild": "^0.25.9",
     "prettier": "^3.6.2",
     "rimraf": "^6.0.1",
+    "shx": "^0.4.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   },
   "dependencies": {
+    "minimist": "^1.2.8",
     "rehype-sanitize": "^6.0.0",
     "rehype-stringify": "^10.0.1",
     "remark-parse": "^11.0.0",

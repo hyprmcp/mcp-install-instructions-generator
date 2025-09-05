@@ -3,13 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MCP Instructions</title>
+    <title>MCP Instructions - Webcomponent Demo</title>
     <script src="./dist/component/index.js"></script>
     <link rel="stylesheet" href="./dist/component/index.css" />
+    <style>
+      body {
+        background: #f0f0f0;
+        color: #282828;
+        margin: 0;
+      }
+
+      main {
+        background: #fcfcfc;
+        font-family: sans-serif;
+        max-width: 52rem;
+        margin: 2rem auto;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow:
+          0 2px 4px rgba(0, 0, 0, 0.1),
+          0 8px 16px rgba(0, 0, 0, 0.1);
+      }
+    </style>
   </head>
   <body>
-    <mcp-instructions
-      url="https://glasskube.hyprmcp.cloud/who-am-i/mcp"
-    ></mcp-instructions>
+    <main>
+      <h1>Webcomponent Demo</h1>
+      <h2>https://mcp.example.com</h2>
+      <mcp-instructions url="https://mcp.example.com"></mcp-instructions>
+
+      <h2>https://glasskube.hyprmcp.cloud/who-am-i/mcp</h2>
+      <mcp-instructions
+        url="https://glasskube.hyprmcp.cloud/who-am-i/mcp"
+      ></mcp-instructions>
+    </main>
   </body>
 </html>
