@@ -22,7 +22,9 @@ You can use the web component by importing it into your HTML file:
   href="https://cdn.jsdelivr.net/npm/@hyprmcp/mcp-install-instructions-generator@0.1.0/dist/component/index.css"
 />
 
-<mcp-install-instructions url="https://mcp.example.com"></mcp-install-instructions>
+<mcp-install-instructions
+  url="https://mcp.example.com"
+></mcp-install-instructions>
 ```
 
 ### JavaScript
@@ -36,7 +38,8 @@ import { generateMCPInstructions } from '@hyprmcp/mcp-install-instructions';
 const instructions = generateMCPInstructions({
   url: 'https://mcp.example.com',
   target: 'vscode',
+  output: 'md',
 });
 
-console.log(instructions.getMarkdown());
+console.log(instructions);
 ```

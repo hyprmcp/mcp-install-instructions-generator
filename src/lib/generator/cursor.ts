@@ -22,6 +22,10 @@ export class CursorInstruction implements Instructions {
 
   getMarkdown(): string {
     return `
+#### Installation Link
+${this.getBadge()}
+
+#### Manual Installation
 Add the following to your \`mcp.json\` file:
 
 \`\`\`json

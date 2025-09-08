@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MCP Instructions - Webcomponent Demo</title>
+    <title>MCP Server Instructions Generator</title>
     <script src="./dist/component/index.js"></script>
     <link rel="stylesheet" href="./dist/component/index.css" />
     <style>
@@ -11,6 +11,15 @@
         background: #f0f0f0;
         color: #282828;
         margin: 0;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin-bottom: 0.4rem;
       }
 
       main {
@@ -24,20 +33,89 @@
           0 2px 4px rgba(0, 0, 0, 0.1),
           0 8px 16px rgba(0, 0, 0, 0.1);
       }
+
+      form {
+        margin-bottom: 0.6rem;
+
+        label {
+          display: block;
+        }
+
+        div {
+          margin-bottom: 0.6rem;
+        }
+      }
+
+      input {
+        border: 1px solid #000000;
+        border-radius: 4px;
+        padding: 0.5rem;
+      }
+
+      button {
+        background: #000000;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
     <main>
-      <h1>Webcomponent Demo</h1>
-      <h2>https://mcp.example.com</h2>
-      <mcp-install-instructions
-        url="https://mcp.example.com"
-      ></mcp-install-instructions>
-
-      <h2>https://glasskube.hyprmcp.cloud/who-am-i/mcp</h2>
-      <mcp-install-instructions
-        url="https://glasskube.hyprmcp.cloud/who-am-i/mcp"
-      ></mcp-install-instructions>
+      <form method="GET">
+        <h1>MCP Server Instructions</h1>
+        <div>
+          <label for="edit-url">Server URL</label>
+          <input
+            type="text"
+            id="edit-url"
+            name="url"
+            placeholder="Enter URL"
+            required
+          />
+        </div>
+        <div>
+          <label for="edit-name">Server Name (optional)</label>
+          <input
+            type="text"
+            id="edit-name"
+            name="name"
+            placeholder="Enter Name"
+          />
+        </div>
+        <button type="submit">Show</button>
+      </form>
+      <form method="GET">
+        <input type="hidden" name="url" value="https://mcp.example.com" />
+        <button type="submit">Show example</button>
+      </form>
     </main>
+    <script>
+      const queryParams = location.search
+        .substring(1)
+        .split('&')
+        .map((s) => s.split('='))
+        .reduce(
+          (acc, [key, value]) => ({ ...acc, [key]: decodeURIComponent(value) }),
+          {},
+        );
+
+      console.log({ url: queryParams.url });
+
+      if (queryParams.url) {
+        const el = document.createElement('mcp-install-instructions');
+        el.setAttribute('url', queryParams.url);
+
+        if (queryParams.name) {
+          el.setAttribute('name', queryParams.name);
+        }
+
+        document.querySelector('main').innerHTML =
+          `<h1>MCP Server Instructions</h1>`;
+        document.querySelector('main').appendChild(el);
+      }
+    </script>
   </body>
 </html>

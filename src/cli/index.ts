@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 import minimist from 'minimist';
-import { targets } from '../lib/target';
-import type { Target } from '../lib/target';
 import { generateMCPInstructions } from '../lib';
+import type { Target } from '../lib/target';
+import { targets } from '../lib/target';
 
 const args = minimist(process.argv.slice(2));
 
@@ -25,8 +25,10 @@ if (args['h'] || args['help']) {
 
 let url: string;
 let name: string | undefined = undefined;
-const target = (args['t'] ?? args['target'] ?? 'vscode') as Target;
 const output = args['o'] ?? args['output'] ?? 'json';
+const target = (args['t'] ??
+  args['target'] ??
+  (output === 'md' ? 'all' : 'vscode')) as Target;
 
 switch (args._.length) {
   case 0:
@@ -42,30 +44,14 @@ switch (args._.length) {
     usage();
 }
 
-const instructions = generateMCPInstructions({ name, url, target });
+let instructions = generateMCPInstructions({ name, url, target, output });
 
-let outputData: unknown;
-switch (output) {
-  case 'json':
-    outputData = instructions.getJSON();
-    break;
-  case 'md':
-    outputData = instructions.getMarkdown();
-    break;
-  case 'link':
-    outputData = instructions.getLink();
-    break;
-  default:
-    console.log(`unknown output type: '${output}'`);
-    usage();
-}
-
-if (outputData) {
-  if (typeof outputData !== 'string') {
-    outputData = JSON.stringify(outputData, null, 2);
+if (instructions) {
+  if (typeof instructions !== 'string') {
+    instructions = JSON.stringify(instructions, null, 2);
   }
 
-  console.log(outputData);
+  console.log(instructions);
 } else {
   console.log(`no '${output}' output available for target '${target}'`);
   process.exit(1);

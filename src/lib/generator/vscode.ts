@@ -26,6 +26,10 @@ export class VscodeInstructions implements Instructions {
 
   getMarkdown(): string {
     return `
+#### Installation Link
+${this.getBadge()}
+
+#### Manual Installation
 Open a terminal and run the following command:
 
 \`\`\`

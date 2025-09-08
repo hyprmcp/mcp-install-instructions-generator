@@ -1,20 +1,36 @@
-mcp-instructions {
-  --primary-color: var(--mcp-instructions-color, #3498db);
-}
+mcp-install-instructions {
+  --primary-color: var(--mcp-instructions-color, black);
 
-.header {
-  border-bottom: 3px solid var(--primary-color);
-}
+  .header,
+  hr {
+    border-top: 0px;
+    border-bottom: 3px solid var(--primary-color);
+  }
 
-.btn {
-  background: none;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px 5px 0 0;
-  cursor: pointer;
-}
+  .header {
+    .btn {
+      background: none;
+      border: none;
+      color: unset;
+      padding: 5px 10px;
+      border-radius: 5px 5px 0 0;
+      cursor: pointer;
+    }
 
-.btn.selected {
-  background: var(--primary-color);
-  color: white;
+    .btn.selected {
+      background: var(--primary-color);
+      color: white;
+    }
+  }
+
+  .content {
+    pre.fullMarkdown {
+      overflow: auto;
+      max-height: 12rem;
+    }
+  }
+
+  .footer {
+    text-align: end;
+  }
 }
