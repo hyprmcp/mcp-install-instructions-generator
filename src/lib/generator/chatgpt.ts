@@ -1,7 +1,7 @@
 import { GeneratorOptions, Instructions } from '../types';
 
 export class ChatGPTInstructions implements Instructions {
-  constructor(_: GeneratorOptions) {}
+  constructor(private readonly options: GeneratorOptions) {}
 
   getLink(): undefined {
     return undefined;
@@ -12,6 +12,15 @@ export class ChatGPTInstructions implements Instructions {
   }
 
   getMarkdown(): string {
-    return '## TODO';
+    return `
+*Note: In Team, Enterprise, and Edu workspaces, only workspace owners and admins have permission*
+
+- Navigate to **Settings > Connectors**
+- Add a custom connector with the server URL: \`${this.options.url}\`
+- It should then be visible in the Composer > Deep research tool
+- You may need to add the server as a source
+
+*Connectors can only be used with **Deep Research***
+`;
   }
 }

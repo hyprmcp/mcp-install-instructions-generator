@@ -7,13 +7,17 @@ mcp-install-instructions {
     border-bottom: 3px solid var(--primary-color);
   }
 
+  hr {
+    margin-bottom: 2rem;
+  }
+
   .header {
     .btn {
       background: none;
       border: none;
       color: unset;
       padding: 5px 10px;
-      border-radius: 5px 5px 0 0;
+      border-radius: 4px 4px 0 0;
       cursor: pointer;
     }
 
@@ -24,8 +28,20 @@ mcp-install-instructions {
   }
 
   .content {
-    pre.fullMarkdown {
+    pre,
+    code {
+      background: #f0f0f0;
+      padding: 2px 4px;
+      border-radius: 2px;
+    }
+
+    pre {
       overflow: auto;
+      padding: 0.6rem;
+      border-radius: 4px;
+    }
+
+    pre.fullMarkdown {
       max-height: 12rem;
     }
   }

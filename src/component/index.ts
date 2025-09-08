@@ -22,7 +22,6 @@ export class McpInstructions extends HTMLElement {
 
   private readonly content: HTMLDivElement;
   private readonly header: HTMLDivElement;
-  private readonly footer: HTMLDivElement;
   private root: DocumentFragment | HTMLElement;
   private rendered = false;
 
@@ -41,7 +40,6 @@ export class McpInstructions extends HTMLElement {
 
     this.header = this.root.querySelector(`.${header}`)!;
     this.content = this.root.querySelector(`.${content}`)!;
-    this.footer = this.root.querySelector(`.${footer}`)!;
 
     this.header.classList.add(header);
     targets.forEach((target, i) => {

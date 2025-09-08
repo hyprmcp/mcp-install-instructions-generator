@@ -1,6 +1,6 @@
 import type { GeneratorOptions, Instructions } from '../types';
 
-export class ClaudeCodeInstruction implements Instructions {
+export class ClaudeCodeInstructions implements Instructions {
   constructor(private readonly options: GeneratorOptions) {}
 
   getLink(): undefined {

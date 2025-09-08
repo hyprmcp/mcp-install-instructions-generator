@@ -1,16 +1,22 @@
 import { Target } from '../target';
 import type { GeneratorOptions, Instructions } from '../types';
-import { ClaudeCodeInstruction as ClaudeCodeInstructions } from './claude_code';
-import { CursorInstruction as CursorInstructions } from './cursor';
+import { ClaudeCodeInstructions } from './claude_code';
+import { ClaudeDesktopInstructions } from './claude_desktop';
+import { CursorInstructions } from './cursor';
 import { VscodeInstructions } from './vscode';
 import { WindsurfInstructions } from './windsurf';
+import { ChatGPTInstructions } from './chatgpt';
+import { GeminiCLIInstructions } from './gemini_cli';
 
 export const generators: Record<
   Target,
   (options: GeneratorOptions) => Instructions
 > = {
   cursor: (options) => new CursorInstructions(options),
-  claude_code: (options) => new ClaudeCodeInstructions(options),
+  'claude-code': (options) => new ClaudeCodeInstructions(options),
+  'claude-desktop': (options) => new ClaudeDesktopInstructions(options),
   vscode: (options) => new VscodeInstructions(options),
   windsurf: (options) => new WindsurfInstructions(options),
+  chatgpt: (options) => new ChatGPTInstructions(options),
+  'gemini-cli': (options) => new GeminiCLIInstructions(options),
 };

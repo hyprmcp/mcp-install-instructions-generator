@@ -1,7 +1,7 @@
 import type { GeneratorOptions, Instructions } from '../types';
 import { badgeMarkdown } from '../util/markdown';
 
-export class CursorInstruction implements Instructions {
+export class CursorInstructions implements Instructions {
   constructor(private readonly options: GeneratorOptions) {}
 
   getBadge(): string | undefined {
