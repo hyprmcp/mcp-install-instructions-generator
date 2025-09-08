@@ -9,8 +9,8 @@ const args = minimist(process.argv.slice(2));
 
 function usage(exitCode = 1): never {
   console.log(`Usage:
-  mcp <url>
-  mcp <name> <url>
+  mcp-install-instructions-generator <url>
+  mcp-install-instructions-generator <name> <url>
 
 Flags:
   -t, --target    Specify the target (${targets.join(', ')}) - default: vscode

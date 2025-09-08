@@ -1,9 +1,9 @@
 {
-  "name": "mcp-instructions",
+  "name": "@hyprmcp/mcp-install-instructions-generator",
   "version": "0.1.0",
   "description": "",
   "scripts": {
-    "prebuild": "rimraf dist",
+    "prebuild": "shx rm -rf dist",
     "build": "tsc && esbuild --bundle --minify --outdir=dist/component src/component/index.ts",
     "postbuild": "shx chmod +x dist/cli/*.js",
     "lint": "prettier --check .",
@@ -27,7 +27,6 @@
     "@types/node": "^24.3.1",
     "esbuild": "^0.25.9",
     "prettier": "^3.6.2",
-    "rimraf": "^6.0.1",
     "shx": "^0.4.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"

@@ -118,4 +118,4 @@ export class McpInstructions extends HTMLElement {
   }
 }
 
-customElements.define('mcp-instructions', McpInstructions);
+customElements.define('mcp-install-instructions', McpInstructions);
