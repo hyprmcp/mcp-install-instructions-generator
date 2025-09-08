@@ -11,9 +11,31 @@
         background: #f0f0f0;
         color: #282828;
         margin: 0;
+        font-family: sans-serif;
       }
 
-      h1,
+      main {
+        max-width: 52rem;
+        margin: 0 auto;
+      }
+
+      .card {
+        box-shadow:
+          0 2px 4px rgba(0, 0, 0, 0.1),
+          0 8px 16px rgba(0, 0, 0, 0.1);
+        background: #fcfcfc;
+        margin: 2rem 0 0.8rem;
+        padding: 2rem;
+        border-radius: 8px;
+      }
+
+      h1 {
+        margin: 0 0 0.8rem;
+        display: flex;
+        align-items: center;
+        gap: 0.2em;
+      }
+
       h2,
       h3,
       h4,
@@ -22,16 +44,8 @@
         margin-bottom: 0.4rem;
       }
 
-      main {
-        background: #fcfcfc;
-        font-family: sans-serif;
-        max-width: 52rem;
-        margin: 2rem auto;
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow:
-          0 2px 4px rgba(0, 0, 0, 0.1),
-          0 8px 16px rgba(0, 0, 0, 0.1);
+      .logo {
+        height: 1.2em;
       }
 
       form {
@@ -60,38 +74,62 @@
         padding: 0.5rem 1rem;
         cursor: pointer;
       }
+
+      .footer {
+        display: flex;
+        gap: 0.2rem;
+        justify-content: flex-end;
+        align-items: center;
+      }
     </style>
   </head>
   <body>
     <main>
-      <form method="GET">
-        <h1>MCP Server Instructions</h1>
-        <div>
-          <label for="edit-url">Server URL</label>
-          <input
-            type="text"
-            id="edit-url"
-            name="url"
-            placeholder="Enter URL"
-            required
-          />
+      <div class="card">
+        <h1>
+          <img class="logo" src="https://hyprmcp.com/mc-dark.svg" />
+          MCP Server Instructions
+        </h1>
+
+        <div id="content">
+          <form method="GET">
+            <h2>Server Information</h2>
+            <div>
+              <label for="edit-url">Server URL</label>
+              <input
+                type="text"
+                id="edit-url"
+                name="url"
+                placeholder="Enter URL"
+                required
+              />
+            </div>
+            <div>
+              <label for="edit-name">Server Name (optional)</label>
+              <input
+                type="text"
+                id="edit-name"
+                name="name"
+                placeholder="Enter Name"
+              />
+            </div>
+            <button type="submit">Show</button>
+          </form>
+          <form method="GET">
+            <input type="hidden" name="url" value="https://mcp.example.com" />
+            <button type="submit">Show example</button>
+          </form>
         </div>
-        <div>
-          <label for="edit-name">Server Name (optional)</label>
-          <input
-            type="text"
-            id="edit-name"
-            name="name"
-            placeholder="Enter Name"
-          />
-        </div>
-        <button type="submit">Show</button>
-      </form>
-      <form method="GET">
-        <input type="hidden" name="url" value="https://mcp.example.com" />
-        <button type="submit">Show example</button>
-      </form>
+      </div>
+
+      <div class="footer">
+        Created by
+        <a href="https://hyprmcp.com/"
+          ><img src="https://hyprmcp.com/hyprmcp_20px.svg"
+        /></a>
+      </div>
     </main>
+
     <script>
       const queryParams = location.search
         .substring(1)
@@ -112,9 +150,7 @@
           el.setAttribute('name', queryParams.name);
         }
 
-        document.querySelector('main').innerHTML =
-          `<h1>MCP Server Instructions</h1>`;
-        document.querySelector('main').appendChild(el);
+        document.querySelector('#content').replaceChildren(el);
       }
     </script>
   </body>

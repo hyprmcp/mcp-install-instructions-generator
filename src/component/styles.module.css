@@ -47,6 +47,9 @@ mcp-install-instructions {
   }
 
   .footer {
-    text-align: end;
+    display: flex;
+    gap: 0.2rem;
+    justify-content: flex-end;
+    align-items: center;
   }
 }

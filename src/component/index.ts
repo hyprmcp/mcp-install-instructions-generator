@@ -14,7 +14,7 @@ import {
 } from './styles.module.css';
 
 export class McpInstructions extends HTMLElement {
-  public static observedAttributes = ['url', 'name'];
+  public static observedAttributes = ['url', 'name', 'watermark'];
 
   private selectedTarget: Target = 'cursor';
   private url?: string;
@@ -33,9 +33,7 @@ export class McpInstructions extends HTMLElement {
   constructor() {
     super();
     const template = document.createElement('template');
-    template.innerHTML = `<div class="${header}"></div>
-<div class="${content}"></div>
-<div class="${footer}">Created by <a href="https://hyprmcp.com/">Hypr MCP</a></div>`;
+    template.innerHTML = `<div class="${header}"></div><div class="${content}"></div>`;
     this.root = template.content;
 
     this.header = this.root.querySelector(`.${header}`)!;
