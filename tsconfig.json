@@ -17,5 +17,5 @@
     "noUncheckedSideEffectImports": true,
     "outDir": "dist"
   },
-  "files": ["src/lib/index.ts", "src/cli/index.ts"]
+  "files": ["src/lib/index.ts", "src/cli/index.ts", "src/mcp/index.ts"]
 }

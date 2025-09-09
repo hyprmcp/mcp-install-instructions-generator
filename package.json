@@ -5,15 +5,20 @@
   "scripts": {
     "prebuild": "shx rm -rf dist",
     "build": "tsc && esbuild --bundle --outdir=dist/component src/component/index.ts",
-    "postbuild": "shx chmod +x dist/cli/*.js",
+    "postbuild": "shx chmod +x dist/cli/*.js dist/mcp/*.js",
     "lint": "prettier --check .",
     "format": "prettier --write .",
-    "cli": "ts-node src/cli/index.ts"
+    "cli": "ts-node src/cli/index.ts",
+    "mcp": "ts-node src/mcp/index.ts",
+    "mcp:prod": "dist/mcp/index.js"
   },
   "files": [
     "dist/*"
   ],
-  "bin": "dist/cli/index.js",
+  "bin": {
+    "@hyprmcp/mcp-install-instructions-generator": "dist/cli/index.js",
+    "mcp": "dist/mcp/index.js"
+  },
   "repository": {
     "url": "https://github.com/hyprmcp/mcp-instructions",
     "type": "git"
@@ -32,10 +37,14 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.5",
+    "@types/express": "^5.0.3",
+    "express": "^5.1.0",
     "minimist": "^1.2.8",
     "rehype-stringify": "^10.0.1",
     "remark-parse": "^11.0.0",
     "remark-rehype": "^11.1.2",
-    "unified": "^11.0.5"
+    "unified": "^11.0.5",
+    "zod": "^3.25.0"
   }
 }

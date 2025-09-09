@@ -11,6 +11,15 @@ npx @hyprmcp/mcp-install-instructions-generator https://mcp.example.com --target
 npx @hyprmcp/mcp-install-instructions-generator --help
 ```
 
+### MCP Server
+
+Use the MCP server to generate instructions for your own MCP server!
+
+```shell
+npx -p @hyprmcp/mcp-install-instructions-generator mcp
+npx @hyprmcp/mcp-install-instructions-generator --help
+```
+
 ### Web Component
 
 You can use the web component by importing it into your HTML file:
