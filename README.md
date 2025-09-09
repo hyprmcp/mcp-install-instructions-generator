@@ -7,8 +7,8 @@
 This package comes with a CLI tool you can simply call using `npx`:
 
 ```shell
-npx @hyprmcp/mcp-install-instructions-generator https://mcp.example.com --target vscode --output md
-npx @hyprmcp/mcp-install-instructions-generator --help
+npx @hyprmcp/mcp-install-instructions-generator@latest https://mcp.example.com --target vscode --output md
+npx @hyprmcp/mcp-install-instructions-generator@latest --help
 ```
 
 ### MCP Server
@@ -16,8 +16,7 @@ npx @hyprmcp/mcp-install-instructions-generator --help
 Use the MCP server to generate instructions for your own MCP server!
 
 ```shell
-npx -p @hyprmcp/mcp-install-instructions-generator mcp
-npx @hyprmcp/mcp-install-instructions-generator --help
+npx -p @hyprmcp/mcp-install-instructions-generator@latest mcp
 ```
 
 ### Web Component
@@ -27,10 +26,10 @@ You can use the web component by importing it into your HTML file:
 <!-- x-release-please-start-version -->
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@hyprmcp/mcp-install-instructions-generator@0.1.0/dist/component/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@hyprmcp/mcp-install-instructions-generator@0.0.0/dist/component/index.js"></script>
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@hyprmcp/mcp-install-instructions-generator@0.1.0/dist/component/index.css"
+  href="https://cdn.jsdelivr.net/npm/@hyprmcp/mcp-install-instructions-generator@0.0.0/dist/component/index.css"
 />
 
 <mcp-install-instructions
