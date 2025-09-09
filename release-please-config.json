@@ -9,7 +9,7 @@
       "bump-patch-for-minor-pre-major": false,
       "include-component-in-tag": false,
       "draft": false,
-      "extra-files": ["src/mcp/server.ts"],
+      "extra-files": ["src/mcp/server.ts", "README.md"],
       "changelog-sections": [
         {
           "type": "feat",
