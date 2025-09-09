@@ -11,7 +11,7 @@ import {
   footer,
   selected,
   fullMarkdown,
-} from './styles.module.css';
+} from './mcp-instructions.module.css';
 
 export class McpInstructions extends HTMLElement {
   public static observedAttributes = ['url', 'name', 'watermark'];

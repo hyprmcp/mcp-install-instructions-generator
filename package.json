@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "prebuild": "shx rm -rf dist",
-    "build": "tsc && esbuild --bundle --minify --outdir=dist/component src/component/index.ts",
+    "build": "tsc && esbuild --bundle --outdir=dist/component src/component/index.ts",
     "postbuild": "shx chmod +x dist/cli/*.js",
     "lint": "prettier --check .",
     "format": "prettier --write .",
