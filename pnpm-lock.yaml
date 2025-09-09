@@ -11,9 +11,6 @@ importers:
       '@modelcontextprotocol/sdk':
         specifier: ^1.17.5
         version: 1.17.5
-      '@types/express':
-        specifier: ^5.0.3
-        version: 5.0.3
       express:
         specifier: ^5.1.0
         version: 5.1.0
@@ -36,6 +33,9 @@ importers:
         specifier: ^3.25.0
         version: 3.25.76
     devDependencies:
+      '@types/express':
+        specifier: ^5.0.3
+        version: 5.0.3
       '@types/minimist':
         specifier: ^1.2.5
         version: 1.2.5

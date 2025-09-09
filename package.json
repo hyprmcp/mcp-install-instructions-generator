@@ -28,6 +28,7 @@
   "license": "MIT",
   "packageManager": "pnpm@10.15.0",
   "devDependencies": {
+    "@types/express": "^5.0.3",
     "@types/minimist": "^1.2.5",
     "@types/node": "^24.3.1",
     "esbuild": "^0.25.9",
@@ -38,7 +39,6 @@
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.17.5",
-    "@types/express": "^5.0.3",
     "express": "^5.1.0",
     "minimist": "^1.2.8",
     "rehype-stringify": "^10.0.1",
