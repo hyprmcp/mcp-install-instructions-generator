@@ -1,6 +1,6 @@
 {
   "name": "@hyprmcp/mcp-install-instructions-generator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "",
   "scripts": {
     "prebuild": "shx rm -rf dist",
