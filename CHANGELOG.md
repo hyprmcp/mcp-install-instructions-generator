@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.1.1](https://github.com/hyprmcp/mcp-install-instructions-generator/compare/v0.1.0...v0.1.1) (2025-09-15)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @modelcontextprotocol/sdk to v1.18.0 ([#8](https://github.com/hyprmcp/mcp-install-instructions-generator/issues/8)) ([6905212](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/6905212a9d7ec3cec691296eb68f0a06fd54e8de))
+* replace empty name with generated ([927fb7b](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/927fb7b9c707a23cb650304ddb2ff2ab314f6e09))
+
+
+### Other
+
+* **deps:** update actions/setup-node action to v5 ([#4](https://github.com/hyprmcp/mcp-install-instructions-generator/issues/4)) ([d74d2dd](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/d74d2ddbf8fb98bedfb8c3bd5b21b01c45093a25))
+* **deps:** update dependency @types/node to v24.4.0 ([#7](https://github.com/hyprmcp/mcp-install-instructions-generator/issues/7)) ([ea88cd2](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/ea88cd2f482f53654c076c5973f1301a9fd130d8))
+* **deps:** update pnpm to v10.16.1 ([#3](https://github.com/hyprmcp/mcp-install-instructions-generator/issues/3)) ([397a870](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/397a870da9643c4fc48babcd62508fc04c9d09ee))
+
 ## 0.1.0 (2025-09-09)
 
 
