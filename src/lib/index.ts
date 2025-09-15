@@ -21,7 +21,7 @@ export function generateMCPInstructions(
   options: Options & { output: 'link'; target: Target },
 ): string;
 export function generateMCPInstructions(options: Options): unknown {
-  const name = options.name ?? generateNameFromURL(options.url);
+  const name = options.name || generateNameFromURL(options.url);
 
   switch (options.output) {
     case 'md':
