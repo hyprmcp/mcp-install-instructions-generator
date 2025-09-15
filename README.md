@@ -2,6 +2,12 @@
 
 ## Usage
 
+### Web / Cloud
+
+We are hosting the latest version of this MCP server instructions generator on our website for free:
+
+> https://hyprmcp.com/mcp-install-instructions-generator/
+
 ### CLI
 
 This package comes with a CLI tool you can simply call using `npx`:
@@ -14,6 +20,18 @@ npx @hyprmcp/mcp-install-instructions-generator@latest --help
 ### MCP Server
 
 Use the MCP server to generate instructions for your own MCP server!
+
+#### Remote MCP Server
+
+This MCP server is hosted on [hyprmcp.com](https://hyprmcp.com/).
+
+You can find all installation instructions by opening the remote MCP Server Url in your browser:
+
+> ```
+> https://demo.hyprmcp.cloud/mcp-install-instructions-generator/mcp
+> ```
+
+#### Local MCP Server
 
 ```shell
 npx -p @hyprmcp/mcp-install-instructions-generator@latest mcp
