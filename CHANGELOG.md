@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.1.2](https://github.com/hyprmcp/mcp-install-instructions-generator/compare/v0.1.1...v0.1.2) (2025-09-18)
+
+
+### Other
+
+* **deps:** update dependency @types/node to v24.5.1 ([#11](https://github.com/hyprmcp/mcp-install-instructions-generator/issues/11)) ([c5d18c9](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/c5d18c9c25b70919c23814676840daf51071080a))
+* **deps:** update dependency @types/node to v24.5.2 ([#14](https://github.com/hyprmcp/mcp-install-instructions-generator/issues/14)) ([a44f378](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/a44f378b16c207b0fcccca7ba9e64bbcf5f70054))
+* **deps:** update dependency esbuild to v0.25.10 ([#12](https://github.com/hyprmcp/mcp-install-instructions-generator/issues/12)) ([5bd6896](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/5bd6896f84fd9afee570b0acfc180f9a814aafbc))
+* **deps:** update pnpm to v10.17.0 ([#13](https://github.com/hyprmcp/mcp-install-instructions-generator/issues/13)) ([6e78c98](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/6e78c98a6e51c73970bbf716d86a94a8c7a0b80d))
+
+
+### Docs
+
+* add hosted version and remote mcp server ([5050db8](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/5050db8c537991e383fbafd64a978ade02bebb14))
+
 ## [0.1.1](https://github.com/hyprmcp/mcp-install-instructions-generator/compare/v0.1.0...v0.1.1) (2025-09-15)
 
 
