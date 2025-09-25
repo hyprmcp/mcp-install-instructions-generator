@@ -7,6 +7,7 @@ import { VscodeInstructions } from './vscode';
 import { WindsurfInstructions } from './windsurf';
 import { ChatGPTInstructions } from './chatgpt';
 import { GeminiCLIInstructions } from './gemini_cli';
+import { CodexInstructions } from './codex';
 
 export const generators: Record<
   Target,
@@ -19,4 +20,5 @@ export const generators: Record<
   windsurf: (options) => new WindsurfInstructions(options),
   chatgpt: (options) => new ChatGPTInstructions(options),
   'gemini-cli': (options) => new GeminiCLIInstructions(options),
+  codex: (options) => new CodexInstructions(options),
 };

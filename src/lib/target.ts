@@ -6,6 +6,7 @@ export const targets = [
   'windsurf',
   'chatgpt',
   'gemini-cli',
+  'codex',
 ] as const;
 
 export type Target = (typeof targets)[number];
@@ -18,6 +19,7 @@ const targetNames = [
   'Windsurf',
   'ChatGPT',
   'Gemini CLI',
+  'Codex',
 ] as const;
 
 export function getTargetName(target: Target): string {
