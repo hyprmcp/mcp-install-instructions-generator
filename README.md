@@ -44,10 +44,10 @@ You can use the web component by importing it into your HTML file:
 <!-- x-release-please-start-version -->
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/@hyprmcp/mcp-install-instructions-generator@0.1.1/dist/component/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@hyprmcp/mcp-install-instructions-generator@0.2.0/dist/component/index.js"></script>
 <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@hyprmcp/mcp-install-instructions-generator@0.1.1/dist/component/index.css"
+  href="https://cdn.jsdelivr.net/npm/@hyprmcp/mcp-install-instructions-generator@0.2.0/dist/component/index.css"
 />
 
 <mcp-install-instructions

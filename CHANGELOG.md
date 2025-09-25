@@ -1,5 +1,31 @@
 # Changelog
 
+## [0.2.0](https://github.com/hyprmcp/mcp-install-instructions-generator/compare/v0.1.1...v0.2.0) (2025-09-25)
+
+
+### Features
+
+* add instructions for codex ([c1b5645](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/c1b5645bc8bd15658a89c4e9bbc9294189fd120f))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @modelcontextprotocol/sdk to v1.18.1 ([#15](https://github.com/hyprmcp/mcp-install-instructions-generator/issues/15)) ([16b05ae](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/16b05aef42d0152a716fbd0688934a6d2057c08e))
+
+
+### Other
+
+* **deps:** update dependency @types/node to v24.5.1 ([#11](https://github.com/hyprmcp/mcp-install-instructions-generator/issues/11)) ([c5d18c9](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/c5d18c9c25b70919c23814676840daf51071080a))
+* **deps:** update dependency @types/node to v24.5.2 ([#14](https://github.com/hyprmcp/mcp-install-instructions-generator/issues/14)) ([a44f378](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/a44f378b16c207b0fcccca7ba9e64bbcf5f70054))
+* **deps:** update dependency esbuild to v0.25.10 ([#12](https://github.com/hyprmcp/mcp-install-instructions-generator/issues/12)) ([5bd6896](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/5bd6896f84fd9afee570b0acfc180f9a814aafbc))
+* **deps:** update pnpm to v10.17.0 ([#13](https://github.com/hyprmcp/mcp-install-instructions-generator/issues/13)) ([6e78c98](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/6e78c98a6e51c73970bbf716d86a94a8c7a0b80d))
+* **deps:** update pnpm to v10.17.1 ([#16](https://github.com/hyprmcp/mcp-install-instructions-generator/issues/16)) ([49c2186](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/49c2186a2ccd1e554b211c607ad290a8ef36597e))
+
+
+### Docs
+
+* add hosted version and remote mcp server ([5050db8](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/5050db8c537991e383fbafd64a978ade02bebb14))
+
 ## [0.1.1](https://github.com/hyprmcp/mcp-install-instructions-generator/compare/v0.1.0...v0.1.1) (2025-09-15)
 
 
