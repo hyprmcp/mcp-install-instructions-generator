@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.2.1](https://github.com/hyprmcp/mcp-install-instructions-generator/compare/v0.2.0...v0.2.1) (2025-10-15)
+
+
+### Other
+
+* **deps:** update actions/setup-node action to v6 ([#23](https://github.com/hyprmcp/mcp-install-instructions-generator/issues/23)) ([c523f75](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/c523f75f61574b539e33ca2b05e94c70e81491e9))
+* **deps:** update dependency @modelcontextprotocol/sdk to v1.20.0 ([#17](https://github.com/hyprmcp/mcp-install-instructions-generator/issues/17)) ([d94310d](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/d94310d508f577557611e6d88f5331ec241bcdd1))
+* **deps:** update dependency esbuild to v0.25.11 ([#24](https://github.com/hyprmcp/mcp-install-instructions-generator/issues/24)) ([77b8cc8](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/77b8cc84a9b28fa0337eb20085b6652190b8f936))
+* **deps:** update dependency typescript to v5.9.3 ([#21](https://github.com/hyprmcp/mcp-install-instructions-generator/issues/21)) ([d03a2a8](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/d03a2a846bd585f280531905bd54786eb6675fd2))
+* **deps:** update docker/login-action action to v3.6.0 ([5bef608](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/5bef60846c19051e22d9f04b1ee2d491b30f1ade))
+* **deps:** update docker/login-action action to v3.6.0 ([025f4a6](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/025f4a69f60ac45eef739e322486cadd83d02b9f))
+* **deps:** update pnpm to v10.18.3 ([#22](https://github.com/hyprmcp/mcp-install-instructions-generator/issues/22)) ([93b0048](https://github.com/hyprmcp/mcp-install-instructions-generator/commit/93b0048b0e1d809e4785c211620c290afc38f5a6))
+
 ## [0.2.0](https://github.com/hyprmcp/mcp-install-instructions-generator/compare/v0.1.1...v0.2.0) (2025-09-25)
 
 
